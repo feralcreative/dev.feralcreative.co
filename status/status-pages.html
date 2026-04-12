@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Status Pages</title>
+    <link rel="stylesheet" href="status-pages.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Service Status Pages</h1>
+
+        <div class="controls">
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search services...">
+                <button id="clearSearch" class="clear-btn" title="Clear search">×</button>
+            </div>
+            <div class="filter-buttons">
+                <button id="showAll" class="filter-btn active">All</button>
+                <button id="showFavorites" class="filter-btn">Favorites</button>
+            </div>
+        </div>
+
+        <div class="grid">
+            <a href="https://status.adobe.com/" class="card" data-service="Adobe" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=adobe.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Adobe</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.anthropic.com/" class="card" data-service="Anthropic" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=anthropic.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Anthropic</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.asana.com/" class="card" data-service="Asana" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=asana.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Asana</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.atlassian.com/" class="card" data-service="Atlassian" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=atlassian.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Atlassian</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://health.aws.amazon.com/health/status" class="card" data-service="AWS" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">AWS</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.bitbucket.org/" class="card" data-service="Bitbucket" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=bitbucket.org&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Bitbucket</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.clickup.com/" class="card" data-service="ClickUp" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=clickup.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">ClickUp</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.cloudflarestatus.com/" class="card" data-service="Cloudflare" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=cloudflare.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Cloudflare</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.datadoghq.com/" class="card" data-service="Datadog" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=datadoghq.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Datadog</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.digitalocean.com/" class="card" data-service="DigitalOcean" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=digitalocean.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">DigitalOcean</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://discordstatus.com/" class="card" data-service="Discord" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=discord.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Discord</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.dockerstatus.com/" class="card" data-service="Docker" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=docker.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Docker</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.dreamhoststatus.com/" class="card" data-service="DreamHost" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=dreamhost.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">DreamHost</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.dropbox.com/" class="card" data-service="Dropbox" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=dropbox.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Dropbox</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.figma.com/" class="card" data-service="Figma" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=figma.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Figma</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.firebase.google.com/" class="card" data-service="Firebase" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=firebase.google.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Firebase</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.githubstatus.com/" class="card" data-service="GitHub" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">GitHub</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.gitlab.com/" class="card" data-service="GitLab" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=gitlab.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">GitLab</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.cloud.google.com/" class="card" data-service="Google Cloud" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=cloud.google.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Google Cloud</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.google.com/appsstatus/dashboard/" class="card" data-service="Google Workspace" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=google.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Google Workspace</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.heroku.com/" class="card" data-service="Heroku" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=heroku.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Heroku</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.hubspot.com/" class="card" data-service="HubSpot" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=hubspot.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">HubSpot</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.apple.com/support/systemstatus/" class="card" data-service="iCloud" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=apple.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">iCloud</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.impartner.com/" class="card" data-service="Impartner" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=impartner.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Impartner</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.linear.app/" class="card" data-service="Linear" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=linear.app&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Linear</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.medium.com/" class="card" data-service="Medium" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=medium.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Medium</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://metastatus.com/" class="card" data-service="Meta" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=meta.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Meta</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.cloud.microsoft/m365" class="card" data-service="Microsoft 365" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=microsoft.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Microsoft 365</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.mongodb.com/" class="card" data-service="MongoDB Atlas" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=mongodb.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">MongoDB Atlas</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.netlifystatus.com/" class="card" data-service="Netlify" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=netlify.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Netlify</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.notion.so/" class="card" data-service="Notion" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=notion.so&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Notion</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.npmjs.org/" class="card" data-service="npm" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=npmjs.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">npm</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.openai.com/" class="card" data-service="OpenAI" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=openai.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">OpenAI</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.pagerduty.com/" class="card" data-service="PagerDuty" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=pagerduty.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">PagerDuty</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.redditstatus.com/" class="card" data-service="Reddit" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=reddit.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Reddit</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.render.com/" class="card" data-service="Render" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=render.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Render</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.salesforce.com/" class="card" data-service="Salesforce" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=salesforce.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Salesforce</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.sendgrid.com/" class="card" data-service="SendGrid" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=sendgrid.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">SendGrid</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.sentry.io/" class="card" data-service="Sentry" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=sentry.io&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Sentry</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.shopifystatus.com/" class="card" data-service="Shopify" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=shopify.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Shopify</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://slack-status.com/" class="card" data-service="Slack" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=slack.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Slack</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.sonic.net/" class="card" data-service="Sonic.net" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=sonic.net&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Sonic.net</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.stackstatus.net/" class="card" data-service="Stack Overflow" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=stackoverflow.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Stack Overflow</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.stripe.com/" class="card" data-service="Stripe" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=stripe.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Stripe</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.supabase.com/" class="card" data-service="Supabase" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=supabase.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Supabase</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.twilio.com/" class="card" data-service="Twilio" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=twilio.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Twilio</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.vercel-status.com/" class="card" data-service="Vercel" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=vercel.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Vercel</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://www.vimeostatus.com/" class="card" data-service="Vimeo" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=vimeo.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Vimeo</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://api.status.x.com/" class="card" data-service="X/Twitter" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=x.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">X/Twitter</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.zendesk.com/" class="card" data-service="Zendesk" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=zendesk.com&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Zendesk</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+            <a href="https://status.zoom.us/" class="card" data-service="Zoom" target="_blank" rel="noopener">
+                <img src="https://www.google.com/s2/favicons?domain=zoom.us&sz=64" alt="" class="card-icon">
+                <h2 class="card-title">Zoom</h2>
+                <button class="favorite-btn" title="Add to favorites">★</button>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Favorites management using localStorage
+        let favorites = JSON.parse(localStorage.getItem('statusPageFavorites')) || [];
+        let currentFilter = 'all';
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateFavoriteButtons();
+            setupEventListeners();
+        });
+
+        function setupEventListeners() {
+            // Search input
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', filterCards);
+
+            // Clear search button
+            document.getElementById('clearSearch').addEventListener('click', () => {
+                searchInput.value = '';
+                filterCards();
+            });
+
+            // Filter buttons
+            document.getElementById('showAll').addEventListener('click', () => {
+                currentFilter = 'all';
+                updateFilterButtons();
+                filterCards();
+            });
+
+            document.getElementById('showFavorites').addEventListener('click', () => {
+                currentFilter = 'favorites';
+                updateFilterButtons();
+                filterCards();
+            });
+
+            // Favorite buttons
+            document.querySelectorAll('.favorite-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const card = e.target.closest('.card');
+                    const service = card.dataset.service;
+                    toggleFavorite(service);
+                });
+            });
+        }
+
+        function toggleFavorite(service) {
+            const index = favorites.indexOf(service);
+            if (index > -1) {
+                favorites.splice(index, 1);
+            } else {
+                favorites.push(service);
+            }
+            localStorage.setItem('statusPageFavorites', JSON.stringify(favorites));
+            updateFavoriteButtons();
+            filterCards();
+        }
+
+        function updateFavoriteButtons() {
+            document.querySelectorAll('.card').forEach(card => {
+                const service = card.dataset.service;
+                const btn = card.querySelector('.favorite-btn');
+                if (favorites.includes(service)) {
+                    btn.classList.add('active');
+                    btn.title = 'Remove from favorites';
+                } else {
+                    btn.classList.remove('active');
+                    btn.title = 'Add to favorites';
+                }
+            });
+        }
+
+        function updateFilterButtons() {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            if (currentFilter === 'all') {
+                document.getElementById('showAll').classList.add('active');
+            } else {
+                document.getElementById('showFavorites').classList.add('active');
+            }
+        }
+
+        function filterCards() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                const service = card.dataset.service.toLowerCase();
+                const matchesSearch = service.includes(searchTerm);
+                const matchesFilter = currentFilter === 'all' || favorites.includes(card.dataset.service);
+
+                if (matchesSearch && matchesFilter) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

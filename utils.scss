@@ -350,8 +350,9 @@ body:has(.viewport-widget) {
   align-items: center;
   justify-content: center;
   left: 0 !important;
-  z-index: 100 !important;
+  z-index: 999999 !important;
   opacity: 0.95 !important;
+  height: 15px;
   &.top {
     top: 0px !important;
   }
@@ -372,6 +373,7 @@ body:has(.viewport-widget) {
   text-align: center;
   width: 100vw !important;
   padding: 0;
+  height: 15px;
 }
 
 /* X-Small (xs) - <576px */
